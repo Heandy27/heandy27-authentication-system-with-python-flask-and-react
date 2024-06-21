@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import { Link } from "react-router-dom";
+import Login from "./Login";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -21,6 +23,9 @@ export const Home = () => {
 					Read documentation
 				</a>
 			</p>
+			<Link to={"/login"}>
+			<button className="btn btn-success">Login</button>
+			</Link>
 		</div>
 	);
 };
